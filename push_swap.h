@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bakumcu <bakumcu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 12:30:00 by bakumcu           #+#    #+#             */
-/*   Updated: 2026/04/29 12:30:00 by bakumcu          ###   ########.fr       */
+/*   Created: 2026/04/29 17:11:08 by bakumcu           #+#    #+#             */
+/*   Updated: 2026/04/29 17:11:10 by bakumcu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ void	ps_ctx_clear(t_ctx *ctx);
 void	ps_stack_clear(t_stack *stack);
 int		ps_stack_build(t_ctx *ctx, t_parse *parse);
 int		ps_is_sorted(t_stack *stack);
+void	ps_algo_simple(t_ctx *ctx);
 
 #endif

@@ -4,6 +4,7 @@ CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 
 SRCS		= main.c \
+			  algo_simple.c \
 			  check_sorted.c \
 			  error_free.c \
 			  parse_args.c \

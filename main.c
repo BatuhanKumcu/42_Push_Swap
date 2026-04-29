@@ -49,5 +49,6 @@ int	main(int argc, char **argv)
 		return (ps_fail_build(&parse, &ctx));
 	if (ps_is_sorted(&ctx.a))
 		return (ps_exit_clean(&parse, &ctx));
+	ps_algo_simple(&ctx);
 	return (ps_exit_clean(&parse, &ctx));
 }
