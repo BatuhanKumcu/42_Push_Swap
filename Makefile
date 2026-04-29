@@ -3,7 +3,14 @@ NAME		= push_swap
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 
-SRCS		= push_swap.c
+SRCS		= main.c \
+			  error_free.c \
+			  parse_args.c \
+			  parse_flags.c \
+			  parse_values.c \
+			  utils_mem.c \
+			  utils_str.c \
+			  utils_write.c
 OBJS		= $(SRCS:.c=.o)
 
 RM			= rm -f

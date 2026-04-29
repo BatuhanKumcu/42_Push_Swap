@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bakumcu <bakumcu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,3 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
+
+int	main(int argc, char **argv)
+{
+	t_parse	parse;
+
+	if (argc == 1)
+		return (0);
+	ps_parse_init(&parse);
+	if (!ps_parse_args(argc, argv, &parse))
+	{
+		ps_parse_clear(&parse);
+		ps_error();
+		return (1);
+	}
+	ps_parse_clear(&parse);
+	return (0);
+}
