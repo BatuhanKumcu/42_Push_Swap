@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_write.c                                      :+:      :+:    :+:   */
+/*   parse_checks.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bakumcu <bakumcu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,22 @@
 
 #include "push_swap.h"
 
-void	ps_putstr_fd(char *str, int fd)
+int	ps_has_duplicate(int *values, int size)
 {
-	if (!str)
-		return ;
-	write(fd, str, ps_strlen(str));
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < size)
+	{
+		j = i + 1;
+		while (j < size)
+		{
+			if (values[i] == values[j])
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }

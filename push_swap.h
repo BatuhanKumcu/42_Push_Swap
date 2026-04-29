@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bakumcu <bakumcu@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/29 12:30:00 by bakumcu           #+#    #+#             */
+/*   Updated: 2026/04/29 12:30:00 by bakumcu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -76,5 +88,11 @@ int		ps_parse_flag(t_parse *parse, char *str, int start, int end);
 int		ps_parse_int(char *str, int start, int end, int *out);
 int		ps_parse_push(t_parse *parse, int value);
 int		ps_has_duplicate(int *values, int size);
+int		*ps_rank_values(int *values, int size);
+void	ps_ctx_init(t_ctx *ctx);
+void	ps_ctx_clear(t_ctx *ctx);
+void	ps_stack_clear(t_stack *stack);
+int		ps_stack_build(t_ctx *ctx, t_parse *parse);
+int		ps_is_sorted(t_stack *stack);
 
 #endif

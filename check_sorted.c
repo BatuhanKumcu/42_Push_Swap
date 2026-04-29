@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_write.c                                      :+:      :+:    :+:   */
+/*   check_sorted.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bakumcu <bakumcu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,16 @@
 
 #include "push_swap.h"
 
-void	ps_putstr_fd(char *str, int fd)
+int	ps_is_sorted(t_stack *stack)
 {
-	if (!str)
-		return ;
-	write(fd, str, ps_strlen(str));
+	int	i;
+
+	i = 0;
+	while (i + 1 < stack->size)
+	{
+		if (stack->v[i] > stack->v[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
 }

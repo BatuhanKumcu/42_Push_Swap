@@ -1,20 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_write.c                                      :+:      :+:    :+:   */
+/*   strategy_simple.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bakumcu <bakumcu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 12:30:00 by bakumcu           #+#    #+#             */
-/*   Updated: 2026/04/29 12:30:00 by bakumcu          ###   ########.fr       */
+/*   Created: 2026/04/29 15:48:38 by bakumcu           #+#    #+#             */
+/*   Updated: 2026/04/29 15:49:44 by bakumcu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ps_putstr_fd(char *str, int fd)
-{
-	if (!str)
-		return ;
-	write(fd, str, ps_strlen(str));
-}
