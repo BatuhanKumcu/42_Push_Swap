@@ -1,4 +1,4 @@
-This project has been created as part of the 42 curriculum by *bakumcu*, *emigundo*
+This project has been created as part of the 42 curriculum by *bakumcu*
 
 Algorithm files to be made as follows: algo_simple, medium, complex, adaptive
 
